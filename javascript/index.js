@@ -1,17 +1,27 @@
-console.log("Het document is gekoppeld");
-
-/* constanten, let variabele, alle functies, event listeners */
-const buttonE1 = document.querySelector("#naamveld");
-const buttonE2 = document.querySelector("#partnerNamen");
-const buttonE3 = document.querySelector("#trouwDatum");
+const inloggenKnop = document.querySelector("#inloggenKnop");
+const partnerNamenKnop = document.querySelector("#partnerNamen");
+const trouwDatumKnop = document.querySelector("#trouwDatum");
+const trouwLocatieKnop = document.querySelector("#trouwLocatie");
 const naamInput1 = document.getElementById("naamInput1");
 const naamInput2 = document.getElementById("naamInput2");
 const trouwDatumInput = document.getElementById("trouwDatumInput");
+const trouwLocatieInput = document.getElementById("trouwLocatieInput");
 const h5 = document.querySelector("h5");
 const h6 = document.querySelector("h6");
-const reclameTekst = document.querySelector(".kaartelementen_aanpassen_tekst p");
+const p = document.querySelector(".kaart p");
+const reclameTekst = document.querySelector(".kaartelementenAanpassen p");
+const kaart = document.querySelector(".kaart");
+const achtergrondKleurSelecteren = document.querySelector("#achtergrondKleurSelecteren");
+const tekstKleurSelecteren = document.querySelector("#tekstKleurSelecteren");
+const omlijningKleurSelecteren = document.querySelector("#omlijningKleurSelecteren");
+
 
 let h1Element = document.querySelector("h1");
+let trouwDatumKnopGeluid = document.getElementById("trouwDatum");
+let partnerNamenKnopGeluid = document.getElementById("partnerNamen");
+let inloggenKnopGeluid = document.getElementById("inloggenKnop");
+let trouwLocatieKnopGeluid = document.getElementById("trouwLocatie");
+
 
 function groet() {
     h1Element.textContent = "Welkom Tessa bij Bruiloftskaarten DIY!";
@@ -28,9 +38,10 @@ function trouwDatum_weergeven() {
     h6.textContent = "Op " + datum + " geven wij elkaar het ja-woord. We nodigen je uit om bij dit mooie moment te kunnen zijn.";
 }
 
-buttonE1.addEventListener("click", groet);
-buttonE2.addEventListener("click", partnerNamen_weergeven);
-buttonE3.addEventListener("click", trouwDatum_weergeven);
+function trouwLocatie_weergeven() {
+    const locatie = trouwLocatieInput.value;
+    p.textContent = "Locatie: " + locatie + ".";
+}
 
 function showReclame() {
     reclameTekst.textContent = "";
@@ -43,65 +54,47 @@ function toonReclame() {
 
 showReclame();
 
-
-
-
-let play = document.getElementById("play");
-
-function SpeelAf() {
-    let geluid = new Audio("geluid.mp3");
+function speelAf() {
+    let geluid = new Audio("sound/mouse-click-153941.mp3");
+    /* Geluid bronvermelding: https://pixabay.com/nl/sound-effects/search/mouse%20click/ */
     geluid.play();
+    /* Code Bronvermelding: https://www.youtube.com/watch?v=3xlws5og44U */
 }
 
-geluidKnop.addEventListener("click", SpeelAf);
-
-
-
-
-
-
-
-
-/* Hier onder heb ik een vraag over */
-const kaart = document.querySelector(".kaart");
-const beigeKleur = document.getElementById("achtergrondkleur_beige");
-const grijzeKleur = document.getElementById("achtergrondkleur_grijs");
-const groeneKleur = document.getElementById("achtergrondkleur_groen");
-const geleKleur = document.getElementById("achtergrondkleur_geel");
-
-function veranderAchtergrond(kleur) {
-    if (kleur === 'Beige') {
-        kaart.style.backgroundColor = "#F2E6D8";
-        /* Bronvermelding = https://programmersportal.com/how-to-change-the-background-color-on-button-click-in-javascript/ */
-    } else if (kleur === 'Grijs') {
-        kaart.style.backgroundColor = "#C7BDB0";
-    } else if (kleur === 'Groen') {
-        kaart.style.backgroundColor = "#98A6A2";
-    } else if (kleur === 'Geel') {
-        kaart.style.backgroundColor = "#EDD8B7";
-    }
+function veranderAchtergrond() {
+    let kleur = achtergrondKleurSelecteren.value;
+    kaart.style.backgroundColor = kleur;
+    /* Code Bronvermelding: https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_input_type_color */
 }
- veranderAchtergrond ('Beige');
 
-beigeKleur.addEventListener ("click", veranderAchtergrond);
-
-/*test */
-const zwarteTekst = document.getElementById("tekstKleur_zwart");
-const grijzeTekst = document.getElementById("tekstKleur_grijs");
-const blauweTekst = document.getElementById("tekstKleur_blauw");
-const bruineTekst = document.getElementById("tekstKleur_bruin");
-
-function veranderTekstKleur (tekst) {
-    if (tekst === 'Zwart') {
-        h5.style.color = "#000000";
-    } else if (tekst === 'Grijs') {
-        h5.style.color = "#3D3D3D";
-    } else if (tekst === 'Blauw') {
-        h5.style.color = "#024059";
-    } else if (tekst === 'Bruin') {
-        h5.style.color = "#593E25";
-    }
+function veranderTekstKleur() {
+    let tekst = tekstKleurSelecteren.value;
+    h5.style.color = tekst;
 }
+
+function veranderOmlijningKleur() {
+    let geselecteerdeKleur = omlijningKleurSelecteren.value;
+    kaart.style.borderColor = geselecteerdeKleur;
+}
+
+
+inloggenKnop.addEventListener("click", groet);
+partnerNamenKnop.addEventListener("click", partnerNamen_weergeven);
+trouwDatumKnop.addEventListener("click", trouwDatum_weergeven);
+trouwLocatieKnop.addEventListener("click", trouwLocatie_weergeven);
+trouwDatumKnopGeluid.addEventListener("click", speelAf);
+partnerNamenKnopGeluid.addEventListener("click", speelAf);
+inloggenKnopGeluid.addEventListener("click", speelAf);
+trouwLocatieKnopGeluid.addEventListener("click", speelAf);
+achtergrondKleurSelecteren.addEventListener("change", veranderAchtergrond);
+tekstKleurSelecteren.addEventListener("change", veranderTekstKleur);
+omlijningKleurSelecteren.addEventListener("change", veranderOmlijningKleur);
+
+
+
+
+
+
 
 /* Nog te gebruiken
 function tijdSchemaAangeven(tijdstipEen, tijdstipTwee, tijdstipDrie, tijdstipVier, tijdstipVijf) {

@@ -17,7 +17,7 @@ h2 {
 }
 
 h3 {
-    margin-top: 50px;
+    margin-top: 35px;
     margin-left: 40px;
     font-size: medium;
 }
@@ -28,12 +28,12 @@ button {
 }
 
 /* Trouwenkaarten foto rij */
-.trouwkaarten_fotorij {
+.trouwKaartenFoto {
     display: flex;
     flex-direction: row;
 }
 
-.trouwkaarten_fotorij img {
+.trouwKaartenFoto img {
     max-width: 31%;
     display: block;
     margin-left: auto;
@@ -41,18 +41,18 @@ button {
 }
 
 /* Kaarten met verschillende stijlen */
-.stijlkaarten {
+.kaartStijlen {
     text-align: center;
     padding: 0 280px 15px 280px;
 }
 
-.stijlkaarten ul {
+.kaartStijlen ul {
     display: flex;
     flex-direction: row;
     list-style: none;
 }
 
-.stijlkaarten li {
+.kaartStijlen li {
     padding: 40px;
     border-radius: 50%;
     border-style: solid;
@@ -61,62 +61,62 @@ button {
 }
 
 /* Toevoeginen voor bij de bruiloft */
-.toevoegingen_bruiloft {
+.bruiloftToevoegingen {
     background-color: #F2E0C9;
     width: 100%;
     height: 500px;
 }
 
-.toevoegingen_bruiloft h2 {
+.bruiloftToevoegingen h2 {
     padding: 30px 0 0 0;
 }
 
-.toevoegingen_bruiloft ul {
+.bruiloftToevoegingen ul {
     display: flex;
     flex-direction: row;
     list-style: none;
     margin-left: 50px;
 }
 
-.toevoegingen_bruiloft li {
+.bruiloftToevoegingen li {
     padding: 10px;
     background-color: whitesmoke;
     margin-left: 150px;
 }
 
-.toevoegingen_foto {
+.bruiloftToevoegingenFoto {
     display: flex;
     flex-direction: row;
     margin-left: 160px;
 }
 
-.toevoegingen_foto img {
+.bruiloftToevoegingenFoto img {
     height: 300px;
     width: 230px;
     display: block;
     padding: 20px 20px 0 20px;
 }
 
-.kopje_eigen_bruiloftkaarten p {
+.kaartOntwerpen p {
     text-align: center;
     margin-bottom: 30px;
 }
 
-.kopje_eigen_bruiloftkaarten img {
+.kaartOntwerpen img {
     float: left;
     margin-left: 100px;
     margin-top: 20px;
     width: 45%;
 }
 
-.kaartelementen_aanpassen_tekst {
-    margin: 0 200px 0 700px;
+.kaartInformatie {
+    margin: 0 0 0 800px;
 }
 
 .knop_partnerNamen p {
     background-color: #F2E0C9;
     padding: 8px 15px;
-    margin-right: 1200px;
+    margin-right: 650px;
     border-radius: 10px;
 }
 
@@ -125,27 +125,23 @@ button {
     color: whitesmoke;
 }
 
-.kaartInformatie {
-    margin-left: 100px;
-    margin-top: 50px;
-}
-
 .kaart {
     width: 600px;
     height: 400px;
-    border: 1px solid;
+    border: 2px solid;
     background-color: white;
     margin-left: 100px;
-    float:left;
+    float:left; 
 }
 
-.kaartelementen_aanpassen_tekst ul {
+.kaartelementenAanpassen ul {
     display: flex;
     flex-direction: row;
     list-style: none;
+    margin-left: 100px;
 }
 
-.kaartelementen_aanpassen_tekst li {
+.kaartelementenAanpassen li {
     padding: 20px;
     background-color: whitesmoke;
     margin-right: 20px;
@@ -172,9 +168,36 @@ h6 {
     margin: 0 50px 0 50px;
 }
 
-.kaartelementen_aanpassen_tekst p {
-    margin: 60px 0 0 45px;
+.kaartelementenAanpassen p {
+    margin: 35px 0 0 45px;
     font-weight: 700;
     font-size: larger;
     color: #005C53;
+}
+
+.kaartelementenAanpassen input {
+    margin-left: 10px;
+}
+
+.kaartelementenAanpassen label {
+    margin-left: 40px;
+}
+
+.kaart p {
+    margin-top: 100px;
+}
+
+.reviewContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.kaartInformatieContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.kaartInformatie {
+    margin-left: 100px;
 }

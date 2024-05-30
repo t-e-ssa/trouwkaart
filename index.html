@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,16 +8,16 @@
         <link rel="stylesheet" href="style/style.css">
     </head>
     <body>
-        <button id="naamveld">Log in</button>
+        <button id="inloggenKnop">Log in</button>
         <h1>Welkom bij Bruiloftskaarten DIY!</h1>
 
-        <div class="trouwkaarten_fotorij">
+        <div class="trouwKaartenFoto">
             <img src="images/trouwkaart_4.jpeg" alt="Een foto van een trouwkaart.">
             <img src="images/trouwkaart_2.jpeg" alt="Een foto van een trouwkaar.">
             <img src="images/trouwkaart_3.jpeg" alt="Een foto van een trouwkaart.">
         </div>
 
-        <section class = "stijlkaarten">
+        <section class = "kaartStijlen">
             <h2>Trouwkaart stijlen</h2>
             <p>Zijn jullie op zoek naar leuke trouwkaarten met bloemen, een moderne trouwkaart of juist op zoek naar een trouwkaart die past bij een bepaald seizoen? Hieronder zijn de verschillende categorieën weergegeven. Kies een trouwkaart uit de collectie en pas 'm helemaal naar wens aan in de editor met eigen teksten, lettertypes, kleuren en illustraties.</p>
             <ul>
@@ -28,9 +28,9 @@
             </ul>   
         </section>
 
-        <section class="toevoegingen_bruiloft">
+        <section class="bruiloftToevoegingen">
             <h2>Extra toevoeging bij de bruiloft</h2>
-            <div class="toevoegingen_foto">
+            <div class="bruiloftToevoegingenFoto">
                 <img src="images/welkomstbord_foto.webp" alt="Een foto van een welkomstbord bij een bruiloft.">
                 <!-- Bronvermelding afbeelding: file:///Users/tessastrijbis/Library/Mobile%20Documents/com~apple~CloudDocs/Blok%204%20jaar%201/Inleiding%20programmeren/eindopdracht-Tessa_strijbis/images/welkomstbord_foto.html -->
                 <img src="images/tafeldecoratie_foto.webp" alt="Een foto van tafeldecoratie bij een bruiloft.">
@@ -48,65 +48,75 @@
             </ul>    
         </section>
         
-        <section class="kopje_eigen_bruiloftkaarten">
+        <section class="kaartOntwerpen">
             <h2>Eigen bruiloftskaarten maken</h2>
             <p>Je kunt hier je eigen trouwkaart gaan samenstellen. Probeer verschillende opties uit en binnen één werkdag ligt jouw trouwkaart al bij jou thuis.</p>
             
             <section class="kaart">
                 <h5></h5>
                 <h6></h6>
+                <p></p>
             </section>
         </section>
+        
+        <article class="kaartInformatieContainer">
+            <section class="kaartInformatie">
+                <h4>Vul hieronder jullie namen in om die op de trouwkaart te zetten</h4>
+                <label for="naamInput1">Naam 1:</label>
+                <input type="text" name="naamInput1" id="naamInput1">
+                <br><br>
+                <label for="naamInput2">Naam 2:</label>
+                <input type="text" name="naamInput2" id="naamInput2">
 
-        <section class="kaartelementen_aanpassen_tekst">
+                <div class="knop_partnerNamen">
+                    <p id="partnerNamen">Zet op de kaart</p>
+                </div>
+            </section>
+        
+            <section class="kaartInformatie">
+                <h4>Vul hieronder de trouwdatum in zodat die op de kaart komt te staan</h4>
+                <label for="trouwDatumInput">Trouwdatum:</label>
+                <input type="text" name="trouwDatumInput" id="trouwDatumInput">
+
+                <div class="knop_partnerNamen">
+                    <p id="trouwDatum">Zet op de kaart</p>
+                </div>
+            </section>
+
+            <section class="kaartInformatie">
+                <h4>Vul hieronder de trouwlocatie in zodat die op de kaart komt te staan</h4>
+                <label for="trouwLocatieInput">Trouwlocatie:</label>
+                <input type="text" name="trouwLocatieInput" id="trouwLocatieInput">
+
+                <div class="knop_partnerNamen">
+                    <p id="trouwLocatie">Zet op de kaart</p>
+                </div>
+            </section>
+        </article>            
+        
+        <section class="kaartelementenAanpassen">
+            <!-- Bronvermelding code: https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_input_type_color -->
             <h3>Achtergrondkleur aanpassen</h3>
-            <ul>
-                <li id="achtergrondkleur_beige">Beige</li>
-                <li id="achtergrondkleur_grijs">Grijs</li>
-                <li id="achtergrondkleur_groen">Groen</li>
-                <li id="achtergrondkleur_geel">Geel</li>
-            </ul>
+            <label for="achtergrondKleurSelecteren">Kies een kleur:</label>
+            <input type="color" id="achtergrondKleurSelecteren" name="achtergrondKleurSelecteren" value="#ff0000">
 
             <h3>Tekstkleur aanpassen</h3>
-            <ul>
-                <li id="tekstKleur_zwart">Zwart</li>
-                <li id="tekstKleur_grijs">Grijs</li>
-                <li id="tekstKleur_blauw">Blauw</li>
-                <li id="tekstKleur_bruin">Bruin</li>
-            </ul>
+            <label for="tekstKleurSelecteren">Kies een kleur:</label>
+            <input type="color" id="tekstKleurSelecteren" name="tekstKleurSelecteren" value="#ff0000">
+
+            <h3>Omlijning kleur aanpassen</h3>
+            <label for="omlijningKleurSelecteren">Kies een kleur:</label>
+            <input type="color" id="omlijningKleurSelecteren" name="omlijningKleurSelecteren" value="#ff0000">
             <p></p>
         </section>
-        <br>
-        <br>
-        <br>
-        <br> 
-        <br>
-        <section class="kaartInformatie">
-            <h4>Vul hieronder jullie namen in om die op de trouwkaart te zetten</h4>
-            <label for="naamInput1">Naam 1:</label>
-            <input type="text" name="naamInput1" id="naamInput1">
-            <br> <br>
-            <label for="naamInput2">Naam 2:</label>
-            <input type="text" name="naamInput2" id="naamInput2">
-
-            <div class="knop_partnerNamen">
-                <p id="partnerNamen">Zet op de kaart</p>
-            </div>
-        </section>
-
-        <section class="kaartInformatie">
-            <h4>Vul hieronder de trouwdatum zodat die op de kaart komt te staan</h4>
-            <label for="trouwDatumInput">Trouwdatum:</label>
-            <input type="text" name="trouwDatumInput" id="trouwDatumInput">
-
-            <div class="knop_partnerNamen">
-                <p id="trouwDatum">Zet op de kaart</p>
-            </div>
-        </section>
-
-        <button id="play">Test</button>
-                    
+    
         <h2>Reacties van klanten over onze trouwkaarten</h2>
-
+        <div class="reviewContainer">
+        <article class="review">
+            <p>*****</p>
+            <p>Geweldige kwaliteit</p>
+            <p>Jan en Marie</p>
+        </article>
+        </div>
     </body>
 </html>
