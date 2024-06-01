@@ -9,7 +9,7 @@ const trouwLocatieInput = document.getElementById("trouwLocatieInput");
 const h5 = document.querySelector("h5");
 const h6 = document.querySelector("h6");
 const p = document.querySelector(".kaart p");
-const reclameTekst = document.querySelector(".kaartelementenAanpassen p");
+const reclameTekst = document.querySelector(".reclame");
 const kaart = document.querySelector(".kaart");
 const achtergrondKleurSelecteren = document.querySelector("#achtergrondKleurSelecteren");
 const tekstKleurSelecteren = document.querySelector("#tekstKleurSelecteren");
@@ -60,13 +60,13 @@ function speelAf() {
     let geluid = new Audio("sound/mouse-click-153941.mp3");
     /* Geluid bronvermelding: https://pixabay.com/nl/sound-effects/search/mouse%20click/ */
     geluid.play();
-    /* Code Bronvermelding: https://www.youtube.com/watch?v=3xlws5og44U */
+    /* Code bronvermelding: https://www.youtube.com/watch?v=3xlws5og44U */
 }
 
 function veranderAchtergrond() {
     let kleur = achtergrondKleurSelecteren.value;
     kaart.style.backgroundColor = kleur;
-    /* Code Bronvermelding: https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_input_type_color */
+    /* Code bronvermelding: https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_input_type_color */
 }
 
 function veranderTekstKleur() {
@@ -80,14 +80,15 @@ function veranderOmlijningKleur() {
 }
 
 function prijsVerandering() {
-    huidigePrijs = huidigePrijs + 5.00;
-    teBetalenBedrag.textContent = huidigePrijs;
-}
+    huidigePrijs += 5.00;
+    teBetalenBedrag.textContent = "€" + huidigePrijs + ",00 euro te betalen";
 
-function prijsVeranderingTekst() {
-    if (huidigePrijs >= 100.00) {
-        alert ("Pas op het te betalen bedrag bereikt de 100 euro!");
-    }
+    if (huidigePrijs == 10.00) {
+        alert("Pas op! Je te betalen bedrag is 10 euro.");
+        /* Code bronvermelding: https://www.w3schools.com/jsref/met_win_alert.asp */
+    } else if (huidigePrijs > 20.00) {
+        alert("Pas op! Je te betalen bedrag is al hoger dan 20 euro.")
+    }       
 }
 
 inloggenKnop.addEventListener("click", groet);
@@ -103,30 +104,4 @@ tekstKleurSelecteren.addEventListener("change", veranderTekstKleur);
 omlijningKleurSelecteren.addEventListener("change", veranderOmlijningKleur);
 partnerNamenKnop.addEventListener("click", prijsVerandering);
 trouwDatumKnop.addEventListener("click", prijsVerandering);
-
-
-
-
-
-
-
-
-
-/* Nog te gebruiken
-function tijdSchemaAangeven(tijdstipEen, tijdstipTwee, tijdstipDrie, tijdstipVier, tijdstipVijf) {
-    console.log("Ontvangst " + tijdstipEen);
-    console.log("Ceremonie " + tijdstipTwee);
-    console.log("Champagne time " + tijdstipDrie);
-    console.log("Wedding diner " + tijdstipVier);
-    console.log("Dance & drinks " + tijdstipVijf);
-}
-
-tijdSchemaAangeven("12:30", "13:00", "14:30", "18:00", "20:30");
-
-function locatieAangeven(straatnaam, huisnummer, postcode, plaatsnaam) {
-    console.log(straatnaam + " " + huisnummer + ", " + postcode + " " + plaatsnaam);
-}
-
-locatieAangeven("Langstraat", "8", "1705NH", "Heerhugowaard");
-
-function telefoonNummerAangeven() */
+trouwLocatieKnop.addEventListener("click", prijsVerandering);
