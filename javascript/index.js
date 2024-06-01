@@ -14,13 +14,15 @@ const kaart = document.querySelector(".kaart");
 const achtergrondKleurSelecteren = document.querySelector("#achtergrondKleurSelecteren");
 const tekstKleurSelecteren = document.querySelector("#tekstKleurSelecteren");
 const omlijningKleurSelecteren = document.querySelector("#omlijningKleurSelecteren");
+const teBetalenBedrag = document.querySelector(".teBetalenBedrag");
+const trouwDatumKnopGeluid = document.getElementById("trouwDatum");
+const partnerNamenKnopGeluid = document.getElementById("partnerNamen");
+const inloggenKnopGeluid = document.getElementById("inloggenKnop");
+const trouwLocatieKnopGeluid = document.getElementById("trouwLocatie");
 
 
 let h1Element = document.querySelector("h1");
-let trouwDatumKnopGeluid = document.getElementById("trouwDatum");
-let partnerNamenKnopGeluid = document.getElementById("partnerNamen");
-let inloggenKnopGeluid = document.getElementById("inloggenKnop");
-let trouwLocatieKnopGeluid = document.getElementById("trouwLocatie");
+let huidigePrijs = 0.00;
 
 
 function groet() {
@@ -77,6 +79,16 @@ function veranderOmlijningKleur() {
     kaart.style.borderColor = geselecteerdeKleur;
 }
 
+function prijsVerandering() {
+    huidigePrijs = huidigePrijs + 5.00;
+    teBetalenBedrag.textContent = huidigePrijs;
+}
+
+function prijsVeranderingTekst() {
+    if (huidigePrijs >= 100.00) {
+        alert ("Pas op het te betalen bedrag bereikt de 100 euro!");
+    }
+}
 
 inloggenKnop.addEventListener("click", groet);
 partnerNamenKnop.addEventListener("click", partnerNamen_weergeven);
@@ -89,6 +101,10 @@ trouwLocatieKnopGeluid.addEventListener("click", speelAf);
 achtergrondKleurSelecteren.addEventListener("change", veranderAchtergrond);
 tekstKleurSelecteren.addEventListener("change", veranderTekstKleur);
 omlijningKleurSelecteren.addEventListener("change", veranderOmlijningKleur);
+partnerNamenKnop.addEventListener("click", prijsVerandering);
+trouwDatumKnop.addEventListener("click", prijsVerandering);
+
+
 
 
 

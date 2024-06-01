@@ -188,9 +188,31 @@ h6 {
 }
 
 .reviewContainer {
-    max-width: 1200px;
-    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    height: 250px;
+    gap: 20px;
+}
+
+.review {
+    background-color: #F2E0C9;
     padding: 20px;
+    border-radius: 10px solid;
+    width: 300px;
+    text-align: center;
+}
+
+.reviewHeader {
+    background-color: whitesmoke;
+    padding: 1px;
+    text-align: center;
+}
+
+.reviewHeader p {
+    align-items: center;
+    font-size: larger;
+    margin: 10px;
 }
 
 .kaartInformatieContainer {
