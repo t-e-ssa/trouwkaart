@@ -83,12 +83,12 @@ function prijsVerandering() {
     huidigePrijs += 5.00;
     teBetalenBedrag.textContent = "€" + huidigePrijs + ",00 euro te betalen";
 
-    if (huidigePrijs == 10.00) {
-        alert("Pas op! Je te betalen bedrag is 10 euro.");
+    if (huidigePrijs == 5.00) {
+        alert("Pas op! Elke keer als u iets toevoegt, gaat het te betalen bedrag omhoog.");
         /* Code bronvermelding: https://www.w3schools.com/jsref/met_win_alert.asp */
-    } else if (huidigePrijs > 20.00) {
-        alert("Pas op! Je te betalen bedrag is al hoger dan 20 euro.")
-    }       
+    } else if (huidigePrijs > 50.00) {
+        alert("Pas op! Je te betalen bedrag is al hoger dan 50 euro.")
+    }    
 }
 
 inloggenKnop.addEventListener("click", groet);
@@ -105,3 +105,6 @@ omlijningKleurSelecteren.addEventListener("change", veranderOmlijningKleur);
 partnerNamenKnop.addEventListener("click", prijsVerandering);
 trouwDatumKnop.addEventListener("click", prijsVerandering);
 trouwLocatieKnop.addEventListener("click", prijsVerandering);
+achtergrondKleurSelecteren.addEventListener("click", prijsVerandering);
+tekstKleurSelecteren.addEventListener("click", prijsVerandering);
+omlijningKleurSelecteren.addEventListener("click", prijsVerandering);
