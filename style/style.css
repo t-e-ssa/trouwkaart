@@ -22,6 +22,26 @@ h3 {
     font-size: medium;
 }
 
+h5 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: larger;
+    text-align: center;
+    margin: 100px 50px 20px 50px;
+}
+
+h6 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: lighter;
+    font-size: larger;
+    text-align: center;
+    margin: 0 50px 0 50px;
+}
+
+
 button {
     margin-left: 30px;
     margin-top: 20px;
@@ -97,27 +117,15 @@ button {
     padding: 20px 20px 0 20px;
 }
 
-.kaartOntwerpen p {
-    text-align: center;
-    margin-bottom: 30px;
+/* Reclame */
+.reclame {
+    margin-right: 300px;
+    font-weight: 700;
+    font-size: larger;
+    color: #005C53;
 }
 
-.kaartInformatie {
-    margin: 0 0 0 800px;
-}
-
-.knop_partnerNamen p {
-    background-color: #F2E0C9;
-    padding: 8px 15px;
-    margin-right: 550px;
-    border-radius: 10px;
-}
-
-.knop_partnerNamen p:hover {
-    background-color: black;
-    color: whitesmoke;
-}
-
+/* Eigen bruiloftskaart maken */
 .kaart {
     width: 650px;
     height: 450px;
@@ -128,13 +136,52 @@ button {
     float:left; 
 }
 
-.kaartelementenAanpassen ul {
+.kaart p {
+    margin-top: 100px;
+}
+
+.kaartOntwerpen p {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.kaartInformatieContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.kaartInformatie {
+    margin-left: 50px;
+}
+
+.knop_partnerNamen p {
+    background-color: #F2E0C9;
+    padding: 8px 15px;
+    margin-right: 450px;
+    border-radius: 10px;
+}
+
+.knop_partnerNamen p:hover {
+    background-color: black;
+    color: whitesmoke;
+}
+
+.kaartElementenAanpassen{
+    margin-left: 20px;
+}
+
+.kaartElementenAanpassen p {
+    margin-left: 40px;
+    font-size: larger;
+}
+
+.kaartElementenAanpassen ul {
     display: flex;
     flex-direction: row;
     list-style: none;
 }
 
-.kaartelementenAanpassen li {
+.kaartElementenAanpassen li {
     padding: 20px;
     background-color: whitesmoke;
     margin-right: 20px;
@@ -142,44 +189,24 @@ button {
     border: 1px solid;
 }
 
-h5 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: larger;
-    text-align: center;
-    margin: 100px 50px 20px 50px;
-}
-
-h6 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: lighter;
-    font-size: larger;
-    text-align: center;
-    margin: 0 50px 0 50px;
-}
-
-.reclame {
-    margin-right: 300px;
-    font-weight: 700;
-    font-size: larger;
-    color: #005C53;
-}
-
-.kaartelementenAanpassen input {
+.kaartElementenAanpassen input {
     margin-left: 10px;
 }
 
-.kaartelementenAanpassen label {
+.kaartElementenAanpassen label {
     margin-left: 40px;
 }
 
-.kaart p {
-    margin-top: 100px;
+/* Het bedrag dat de gebruiker moet betalen */
+.teBetalenBedrag {
+    float: right;
+    margin-top: 80px;
+    margin-right: 200px;
+    background-color: #F2E0C9;
+    padding: 10px;
 }
 
+/* Reviews */
 .reviewContainer {
     display: flex;
     justify-content: center;
@@ -206,30 +233,4 @@ h6 {
     align-items: center;
     font-size: larger;
     margin: 10px;
-}
-
-.kaartInformatieContainer {
-    display: flex;
-    flex-direction: column;
-}
-
-.kaartInformatie {
-    margin-left: 50px;
-}
-
-.teBetalenBedrag {
-    float: right;
-    margin-top: 80px;
-    margin-right: 200px;
-    background-color: #F2E0C9;
-    padding: 10px;
-}
-
-.kaartelementenAanpassen{
-    margin-left: 20px;
-}
-
-.kaartelementenAanpassen p {
-    margin-left: 40px;
-    font-size: larger;
 }
